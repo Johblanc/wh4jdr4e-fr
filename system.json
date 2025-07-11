@@ -2,11 +2,5 @@
   "id": "wfjdr4e-fr",
   "title": "Minimal World Building",
   "description": "A human-readable description of your system.",
-  "version": "1.0.0",
-  "compatibility": {
-    "minimum": 12,
-    "verified": 12
-  },
-  "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0/system.json",
-  "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0/wh4jdr4e-fr-0.zip"
+  "version": "1.0.0"
 }
