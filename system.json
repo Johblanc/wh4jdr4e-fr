@@ -7,49 +7,6 @@
     "minimum": 12,
     "verified": 12
   },
-  "authors": [
-    {
-      "name": "me",
-      "url": "YOUR WEBSITE ADDRESS HERE",
-      "email": "YOUR EMAIL ADDRESS HERE",
-      "discord": "YOUR DISCORD USERNAME HERE"
-    }
-  ],
-  "esmodules": ["wfjdr4e-fr.mjs"],
-  "styles": ["css/wfjdr4e-fr.css"],
-  "packs": [
-    {
-      "name": "monsters",
-      "label": "My Monsters",
-      "type": "Actor"
-    },
-    {
-      "name": "items",
-      "label": "My Items",
-      "type": "Item"
-    }
-  ],
-  "languages": [],
-  "documentTypes": {
-    "Actor": {
-      "hero": { "htmlFields": ["background.biography"] },
-      "villain": { "htmlFields": ["background.biography"] },
-      "pawn": {}
-    },
-    "Item": {
-      "weapon": {},
-      "spell": {}
-    }
-  },
-  "socket": false,
-  "initiative": "1d20",
-  "grid": {
-    "distance": 10,
-    "units": "ft"
-  },
-  "primaryTokenAttribute": "resources.health",
-  "secondaryTokenAttribute": "resources.power",
-  "url": "https://github.com/Johblanc/wh4jdr4e-fr/",
   "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0/system.json",
   "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0/wh4jdr4e-fr-0.zip"
 }
