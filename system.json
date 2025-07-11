@@ -1,6 +1,54 @@
 {
-  "name": "wfjdr4e-fr",
-  "title": "wfjdr4e-fr",
-  "description": "The wfjdr4e-fr system for FoundryVTT!",
-  "version": "0.0.1"
+  "id": "wfjdr4e-fr",
+  "title": "Minimal World Building",
+  "description": "A human-readable description of your system.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12
+  },
+  "authors": [
+    {
+      "name": "me",
+      "url": "YOUR WEBSITE ADDRESS HERE",
+      "email": "YOUR EMAIL ADDRESS HERE",
+      "discord": "YOUR DISCORD USERNAME HERE"
+    }
+  ],
+  "esmodules": ["wfjdr4e-fr.mjs"],
+  "styles": ["css/wfjdr4e-fr.css"],
+  "packs": [
+    {
+      "name": "monsters",
+      "label": "My Monsters",
+      "type": "Actor"
+    },
+    {
+      "name": "items",
+      "label": "My Items",
+      "type": "Item"
+    }
+  ],
+  "languages": [],
+  "documentTypes": {
+    "Actor": {
+      "hero": { "htmlFields": ["background.biography"] },
+      "villain": { "htmlFields": ["background.biography"] },
+      "pawn": {}
+    },
+    "Item": {
+      "weapon": {},
+      "spell": {}
+    }
+  },
+  "socket": false,
+  "initiative": "1d20",
+  "grid": {
+    "distance": 10,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": "resources.power",
+  "url": "https://github.com/Johblanc/wh4jdr4e-fr/",
+  "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/system.json"
 }
