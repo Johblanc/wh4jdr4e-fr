@@ -6,7 +6,7 @@ import { Wf4jdr4eFrActorSheet } from './sheets/actor-sheet.mjs';
 import { Wf4jdr4eFrItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
-import { BOILERPLATE } from './helpers/config.mjs';
+import { WHF4 } from './helpers/config.mjs';
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -15,14 +15,14 @@ import { BOILERPLATE } from './helpers/config.mjs';
 Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.wf4jdr4e-fr = {
+  game.wf4jdr4efr = {
     Wf4jdr4eFrActor,
     Wf4jdr4eFrItem,
     rollItemMacro,
   };
 
   // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
+  CONFIG.WHF4 = WHF4;
 
   /**
    * Set an initiative formula for the system
@@ -46,12 +46,12 @@ Hooks.once('init', function () {
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('wf4jdr4e-fr', Wf4jdr4eFrActorSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Actor',
+    label: 'WHF4.SheetLabels.Actor',
   });
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('wf4jdr4e-fr', Wf4jdr4eFrItemSheet, {
     makeDefault: true,
-    label: 'BOILERPLATE.SheetLabels.Item',
+    label: 'WHF4.SheetLabels.Item',
   });
 
   // Preload Handlebars templates.
@@ -99,7 +99,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.wf4jdr4e-fr.rollItemMacro("${data.uuid}");`;
+  const command = `game.wf4jdr4efr.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(
     (m) => m.name === item.name && m.command === command
   );

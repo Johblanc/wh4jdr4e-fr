@@ -46,8 +46,8 @@ export class Wf4jdr4eFrActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
 
-    // Adding a pointer to CONFIG.BOILERPLATE
-    context.config = CONFIG.BOILERPLATE;
+    // Adding a pointer to CONFIG.WHF4
+    context.config = CONFIG.WHF4;
 
     // Prepare character data and items.
     if (actorData.type == 'character') {

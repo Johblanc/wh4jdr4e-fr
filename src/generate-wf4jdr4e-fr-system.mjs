@@ -102,7 +102,7 @@ class SystemGenerator {
   /**
    * Replace file contents.
    *
-   * Replace refercnes to 'wf4jdr4e-fr', 'Wf4jdr4eFr', and 'BOILERPLATE'
+   * Replace refercnes to 'wf4jdr4e-fr', 'Wf4jdr4eFr', and 'WHF4'
    * in files copied over to the build directory.
    */
   replaceFileContents() {
@@ -125,7 +125,7 @@ class SystemGenerator {
         replacement: this.className
       },
       {
-        pattern: 'BOILERPLATE',
+        pattern: 'WHF4',
         replacement: this.constantName
       }
     ];

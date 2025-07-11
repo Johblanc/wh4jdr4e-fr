@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const WHF4 = {};
 
 /**
  * The set of Ability Scores used within the system.
  * @type {Object}
  */
-BOILERPLATE.abilities = {
-  str: 'BOILERPLATE.Ability.Str.long',
-  dex: 'BOILERPLATE.Ability.Dex.long',
-  con: 'BOILERPLATE.Ability.Con.long',
-  int: 'BOILERPLATE.Ability.Int.long',
-  wis: 'BOILERPLATE.Ability.Wis.long',
-  cha: 'BOILERPLATE.Ability.Cha.long',
+WHF4.abilities = {
+  str: 'WHF4.Ability.Str.long',
+  dex: 'WHF4.Ability.Dex.long',
+  con: 'WHF4.Ability.Con.long',
+  int: 'WHF4.Ability.Int.long',
+  wis: 'WHF4.Ability.Wis.long',
+  cha: 'WHF4.Ability.Cha.long',
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  str: 'BOILERPLATE.Ability.Str.abbr',
-  dex: 'BOILERPLATE.Ability.Dex.abbr',
-  con: 'BOILERPLATE.Ability.Con.abbr',
-  int: 'BOILERPLATE.Ability.Int.abbr',
-  wis: 'BOILERPLATE.Ability.Wis.abbr',
-  cha: 'BOILERPLATE.Ability.Cha.abbr',
+WHF4.abilityAbbreviations = {
+  str: 'WHF4.Ability.Str.abbr',
+  dex: 'WHF4.Ability.Dex.abbr',
+  con: 'WHF4.Ability.Con.abbr',
+  int: 'WHF4.Ability.Int.abbr',
+  wis: 'WHF4.Ability.Wis.abbr',
+  cha: 'WHF4.Ability.Cha.abbr',
 };

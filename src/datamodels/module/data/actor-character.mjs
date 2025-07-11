@@ -14,7 +14,7 @@ export default class Wf4jdr4eFrCharacter extends Wf4jdr4eFrActorBase {
     });
 
     // Iterate over ability names and create a new SchemaField for each.
-    schema.abilities = new fields.SchemaField(Object.keys(CONFIG.BOILERPLATE.abilities).reduce((obj, ability) => {
+    schema.abilities = new fields.SchemaField(Object.keys(CONFIG.WHF4.abilities).reduce((obj, ability) => {
       obj[ability] = new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 10, min: 0 }),
       });
@@ -30,7 +30,7 @@ export default class Wf4jdr4eFrCharacter extends Wf4jdr4eFrActorBase {
       // Calculate the modifier using d20 rules.
       this.abilities[key].mod = Math.floor((this.abilities[key].value - 10) / 2);
       // Handle ability label localization.
-      this.abilities[key].label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[key]) ?? key;
+      this.abilities[key].label = game.i18n.localize(CONFIG.WHF4.abilities[key]) ?? key;
     }
   }
 
