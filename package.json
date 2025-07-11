@@ -1,11 +1,11 @@
 {
-  "name": "boilerplate",
+  "name": "wf4jdr4e-fr",
   "version": "2.0.0",
-  "description": "CSS compiler for the Boilerplate system",
+  "description": "CSS compiler for the Wf4jdr4eFr system",
   "scripts": {
-    "build": "sass src/scss/boilerplate.scss css/boilerplate.css --style=expanded --no-source-map",
-    "watch": "sass src/scss/boilerplate.scss css/boilerplate.css --style=expanded --source-map --watch",
-    "generate": "node src/generate-boilerplate-system.mjs"
+    "build": "sass src/scss/wf4jdr4e-fr.scss css/wf4jdr4e-fr.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/wf4jdr4e-fr.scss css/wf4jdr4e-fr.css --style=expanded --source-map --watch",
+    "generate": "node src/generate-wf4jdr4e-fr-system.mjs"
   },
   "browserslist": [
     "last 3 versions"

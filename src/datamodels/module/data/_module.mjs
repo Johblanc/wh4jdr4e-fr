@@ -1,10 +1,10 @@
 // Export Actors
-export {default as BoilerplateActorBase} from "./base-actor.mjs";
-export {default as BoilerplateCharacter} from "./actor-character.mjs";
-export {default as BoilerplateNPC} from "./actor-npc.mjs";
+export {default as Wf4jdr4eFrActorBase} from "./base-actor.mjs";
+export {default as Wf4jdr4eFrCharacter} from "./actor-character.mjs";
+export {default as Wf4jdr4eFrNPC} from "./actor-npc.mjs";
 
 // Export Items
-export {default as BoilerplateItemBase} from "./base-item.mjs";
-export {default as BoilerplateItem} from "./item-item.mjs";
-export {default as BoilerplateFeature} from "./item-feature.mjs";
-export {default as BoilerplateSpell} from "./item-spell.mjs";
+export {default as Wf4jdr4eFrItemBase} from "./base-item.mjs";
+export {default as Wf4jdr4eFrItem} from "./item-item.mjs";
+export {default as Wf4jdr4eFrFeature} from "./item-feature.mjs";
+export {default as Wf4jdr4eFrSpell} from "./item-spell.mjs";

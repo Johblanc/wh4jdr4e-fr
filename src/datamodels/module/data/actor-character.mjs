@@ -1,6 +1,6 @@
-import BoilerplateActorBase from "./base-actor.mjs";
+import Wf4jdr4eFrActorBase from "./base-actor.mjs";
 
-export default class BoilerplateCharacter extends BoilerplateActorBase {
+export default class Wf4jdr4eFrCharacter extends Wf4jdr4eFrActorBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;

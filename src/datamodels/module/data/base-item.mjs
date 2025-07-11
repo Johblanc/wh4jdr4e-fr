@@ -1,6 +1,6 @@
-import BoilerplateDataModel from "./base-model.mjs";
+import Wf4jdr4eFrDataModel from "./base-model.mjs";
 
-export default class BoilerplateItemBase extends BoilerplateDataModel {
+export default class Wf4jdr4eFrItemBase extends Wf4jdr4eFrDataModel {
 
   static defineSchema() {
     const fields = foundry.data.fields;

@@ -1,17 +1,8 @@
 {
-  "id": "boilerplate",
-  "title": "Boilerplate",
-  "description": "The Boilerplate system for FoundryVTT!",
-  "authors": [
-    {
-      "name": "Asacolips",
-      "discord": "asacolips"
-    },
-    {
-      "name": "Lee Talman",
-      "discord": ".pizzaWizard"
-    }
-  ],
+  "id": "wf4jdr4e-fr",
+  "title": "Wf4jdr4eFr",
+  "description": "The Wf4jdr4eFr system for FoundryVTT!",
+  "authors": [],
   "url": "Replace this with a link to your public repository",
   "license": "LICENSE.txt",
   "readme": "README.md",
@@ -20,8 +11,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/boilerplate/assets/anvil-impact.png",
-      "thumbnail": "systems/boilerplate/assets/anvil-impact.png"
+      "url": "systems/wf4jdr4e-fr/assets/anvil-impact.png",
+      "thumbnail": "systems/wf4jdr4e-fr/assets/anvil-impact.png"
     }
   ],
   "version": "2.0.0",
@@ -29,8 +20,8 @@
     "minimum": 13,
     "verified": "13.346"
   },
-  "esmodules": ["module/boilerplate.mjs"],
-  "styles": ["css/boilerplate.css"],
+  "esmodules": ["module/wf4jdr4e-fr.mjs"],
+  "styles": ["css/wf4jdr4e-fr.css"],
   "languages": [
     {
       "lang": "en",
@@ -43,7 +34,7 @@
   "socket": false,
   "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0.0.1/system.json",
   "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/download/v0.0.1/wh4jdr4e-fr-0.0.1.zip",
-  "background": "systems/boilerplate/assets/anvil-impact.png",
+  "background": "systems/wf4jdr4e-fr/assets/anvil-impact.png",
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",

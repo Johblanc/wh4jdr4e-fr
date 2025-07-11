@@ -1,6 +1,6 @@
-import BoilerplateItemBase from "./base-item.mjs";
+import Wf4jdr4eFrItemBase from "./base-item.mjs";
 
-export default class BoilerplateItem extends BoilerplateItemBase {
+export default class Wf4jdr4eFrItem extends Wf4jdr4eFrItemBase {
 
   static defineSchema() {
     const fields = foundry.data.fields;
