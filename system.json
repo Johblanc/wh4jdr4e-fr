@@ -50,5 +50,5 @@
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.power",
   "url": "https://github.com/Johblanc/wh4jdr4e-fr/",
-  "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/system.json"
+  "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/blob/main/system.json"
 }
