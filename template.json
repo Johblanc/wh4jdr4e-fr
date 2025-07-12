@@ -78,26 +78,18 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["attribut"],
     "templates": {
-      "base": {
+      "baseItem": {
         "id": "",
         "name": "",
         "description": ""
       }
     },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
-    },
-    "feature": {
-      "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+    "attribut": {
+      "templates": ["baseItem"],
+      "shortcut": "",
+      "isCarac": true
     }
   }
 }
