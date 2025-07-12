@@ -9,6 +9,7 @@
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
     "SheetLabels": {
+      "Monster": "Wf4jdr4eFr Monster Sheet",
       "Actor": "Wf4jdr4eFr Actor Sheet",
       "Item": "Wf4jdr4eFr Item Sheet"
     },
@@ -29,6 +30,7 @@
 
   "TYPES": {
     "Actor": {
+      "monster": "Monster",
       "character": "Character",
       "npc": "NPC"
     },
