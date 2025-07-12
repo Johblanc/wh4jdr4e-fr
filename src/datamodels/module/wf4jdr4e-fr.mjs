@@ -34,7 +34,7 @@ Hooks.once('init', function () {
     formula: '1d20 + @abilities.dex.mod',
     decimals: 2,
   };
-
+  
   // Define custom Document and DataModel classes
   CONFIG.Actor.documentClass = Wf4jdr4eFrActor;
 
@@ -43,7 +43,8 @@ Hooks.once('init', function () {
   // with the Character/NPC as part of super.defineSchema()
   CONFIG.Actor.dataModels = {
     character: models.Wf4jdr4eFrCharacter,
-    npc: models.Wf4jdr4eFrNPC
+    npc: models.Wf4jdr4eFrNPC,
+    characterPlus: models.Wf4jdr4eFrCharacterPlus,
   }
   CONFIG.Item.documentClass = Wf4jdr4eFrItem;
   CONFIG.Item.dataModels = {

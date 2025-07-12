@@ -1,6 +1,7 @@
 // Export Actors
 export {default as Wf4jdr4eFrActorBase} from "./base-actor.mjs";
 export {default as Wf4jdr4eFrCharacter} from "./actor-character.mjs";
+export {default as Wf4jdr4eFrCharacterPlus} from "./actor-character-plus.mjs";
 export {default as Wf4jdr4eFrNPC} from "./actor-npc.mjs";
 
 // Export Items
