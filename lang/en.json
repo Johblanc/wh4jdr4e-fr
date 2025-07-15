@@ -1,17 +1,42 @@
 {
-  "WHF4": {
+  "WFJDR4E": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "WS": { "long": "Weapon Skill", "abbr": "WS", "description": "" },
+      "BS": { "long": "Ballistic Skill", "abbr": "BS", "description": "" },
+      "S": { "long": "Strength", "abbr": "S", "description": "" },
+      "T": { "long": "Toughness", "abbr": "T", "description": "" },
+      "I": { "long": "Initiative", "abbr": "I", "description": "" },
+      "Ag": { "long": "Agility", "abbr": "Ag", "description": "" },
+      "Dex": { "long": "Dexterity", "abbr": "Dex", "description": "" },
+      "Int": { "long": "Intelligence", "abbr": "Int", "description": "" },
+      "WP": { "long": "Willpower", "abbr": "WP", "description": "" },
+      "Fel": { "long": "Fellowship", "abbr": "Fel", "description": "" }
+    },
+    "StuffFeatureCategory": {
+      "Malus": "Malus",
+      "Bonus": "Bonus",
+      "Group": "Groupe"
+    },
+    "StuffFeatureDivision": {
+      "Weapon": "Weapons",
+      "Melee_Weapon": "Melee Weapons",
+      "Ballistic_Weapon": "Ballistic Weapons",
+      "Armor": "Armors",
+      "Consumable": "Consumables",
+      "Container": "Containers",
+      "Objet": "Objets",
+      "Service": "Services"
+    },
+    "StuffFeature": {
+      "name": "Name",
+      "description": "Description",
+      "has_indice": "Has an Indice",
+      "category": "Category",
+      "division": "Division"
     },
     "SheetLabels": {
-      "Monster": "Wf4jdr4eFr Monster Sheet",
-      "Actor": "Wf4jdr4eFr Actor Sheet",
-      "Item": "Wf4jdr4eFr Item Sheet"
+      "Actor": "Wfjdr4e Actor Sheet",
+      "Item": "Wfjdr4e Item Sheet"
     },
     "Item": {
       "Spell": {
@@ -30,14 +55,14 @@
 
   "TYPES": {
     "Actor": {
-      "monster": "Monster",
       "character": "Character",
       "npc": "NPC"
     },
     "Item": {
       "item": "Item",
       "feature": "Feature",
-      "spell": "Spell"
+      "spell": "Spell",
+      "stuff_feature": "Stuff Feature"
     }
   }
 }

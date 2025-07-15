@@ -1,0 +1,108 @@
+{
+  "WFJDR4E": {
+    "Ability": {
+      "WS": {
+        "long": "Capacité de Combat",
+        "abbr": "CC",
+        "description": "Il s’agit de votre capacité à vous battre au Corps à corps, à exécuter une frappe mesurée, et de votre efficacité dans le tumulte d’une mêlée générale. Cet Attribut est aussi utilisé pour le combat à mains nues, quand l’arme est votre propre corps !"
+      },
+      "BS": {
+        "long": "Capacité de Tir",
+        "abbr": "CT",
+        "description": "Elle représente votre capacité à atteindre vos cibles avec des armes à distance telles que des arcs et des couteaux de lancer, et, en général, à lancer des objets. Cet Attribut est aussi utilisé comme base pour d’autres attaques à distance comme le Vomissement des trolls."
+      },
+      "S": {
+        "long": "Force",
+        "abbr": "F",
+        "description": "Ceci indique combien de Dégâts vous infligez au Corps à corps, combien vous pouvez soulever et à quel point vous êtes bon en Natation et en Escalade."
+      },
+      "T": {
+        "long": "Endurance",
+        "abbr": "E",
+        "description": "Il s’agit de votre résistance physique. Elle vous aide à survivre aux Dégâts durant un combat, mais aussi à des conditions difficiles et à résister au poison."
+      },
+      "I": {
+        "long": "Initiative",
+        "abbr": "I",
+        "description": "Elle représente votre vitesse de pensée et de réaction, en particulier dans le feu de l’action et quand vous êtes sous pression. Elle détermine l’ordre de combat, votre intuition et votre perception, et vous aide à être le premier à réagir."
+      },
+      "Ag": {
+        "long": "Agilité",
+        "abbr": "Ag",
+        "description": "L’Agilité est l’expression de votre coordination physique et de vos capacités athlétiques naturelles, la base dans des domaines comme la course, l’équitation et la dissimulation. Elle est aussi utilisée pour esquiver les coups en combat."
+      },
+      "Dex": {
+        "long": "Dexterité",
+        "abbr": "Dex",
+        "description": "Elle indique votre capacité à accomplir des tâches manuelles délicates telles que jouer d’un instrument de musique ou confectionner habilement des objets. Elle vous aide aussi pour les tours de passe-passe ou pour faire les poches. "
+      },
+      "Int": {
+        "long": "Intelligence",
+        "abbr": "Int",
+        "description": "L’Intelligence symbolise le potentiel de pensée, d’analyse et de compréhension. Utile pour soigner, évaluer et pour les connaissances en général, elle est indispensable pour comprendre et lancer des Sorts."
+      },
+      "WP": {
+        "long": "Force Mentale",
+        "abbr": "FM",
+        "description": "La Force Mentale représente votre volonté en général et votre capacité à ignorer les difficultés et à vous concentrer sur le travail en cours. Elle aide à résister à toutes sortes d’influences et de coercitions, et protège contre la peur et la terreur."
+      },
+      "Fel": {
+        "long": "Sociabilité",
+        "abbr": "Soc",
+        "description": "La Sociabilité vous pousse à vous entendre avec les gens et à paraître assez plaisant et convenable. Elle vous aide lorsque vous discutez avec les gens du coin ou que vous commandez les gens en situation de combat, enjôlez les gardes ou tentez de les corrompre, et, pour les Personnages pieux, lorsque vous communiquez avec votre divinité."
+      }
+    },
+    "StuffFeatureCategory": {
+      "Malus": "Défaut",
+      "Bonus": "Atout",
+      "Group": "Groupe"
+    },
+    "StuffFeatureDivision": {
+      "Weapon": "Armes",
+      "Melee_Weapon": "Armes de corps à corps",
+      "Ballistic_Weapon": "Armes à distance",
+      "Armor": "Armures",
+      "Consumable": "Consommables",
+      "Container": "Contenants",
+      "Objet": "Objets",
+      "Service": "Services"
+    },
+    "StuffFeature": {
+      "name": "Nom",
+      "description": "Description",
+      "has_indice": "A un indice",
+      "category": "Catégorie",
+      "division": "Division"
+    },
+    "SheetLabels": {
+      "Actor": "Wfjdr4e Fiche d'Acteur",
+      "Item": "Wfjdr4e Fiche d'Élément"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    }
+  },
+
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell",
+      "stuff_feature": "Propriété d'Équipement"
+    }
+  }
+}

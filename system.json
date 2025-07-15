@@ -1,8 +1,12 @@
 {
-  "id": "wf4jdr4e-fr",
-  "title": "Wf4jdr4eFr",
-  "description": "The Wf4jdr4eFr system for FoundryVTT!",
-  "authors": [],
+  "id": "wh4jdr4e-fr",
+  "title": "Warhammer Fantasy Jeu De Role 4eme Edition",
+  "description": "The Warhammer Fantasy Jeu De Role 4eme Edition system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Joh"
+    }
+  ],
   "url": "Replace this with a link to your public repository",
   "license": "LICENSE.txt",
   "readme": "README.md",
@@ -11,8 +15,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/wf4jdr4e-fr/assets/anvil-impact.png",
-      "thumbnail": "systems/wf4jdr4e-fr/assets/anvil-impact.png"
+      "url": "systems/wh4jdr4e-fr/assets/anvil-impact.png",
+      "thumbnail": "systems/wh4jdr4e-fr/assets/anvil-impact.png"
     }
   ],
   "version": "0.0.5",
@@ -20,13 +24,18 @@
     "minimum": 13,
     "verified": "13.346"
   },
-  "esmodules": ["module/wf4jdr4e-fr.mjs"],
-  "styles": ["css/wf4jdr4e-fr.css"],
+  "esmodules": ["module/wh4jdr4e-fr.mjs"],
+  "styles": ["css/wh4jdr4e-fr.css"],
   "languages": [
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
     }
   ],
   "packs": [],
@@ -34,9 +43,9 @@
   "socket": false,
   "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/system.json",
   "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/wh4jdr4e-fr.zip",
-  "background": "systems/wf4jdr4e-fr/assets/anvil-impact.png",
-  "gridDistance": 1.5,
-  "gridUnits": "m",
+  "background": "systems/wh4jdr4e-fr/assets/anvil-impact.png",
+  "gridDistance": 5,
+  "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power"
 }

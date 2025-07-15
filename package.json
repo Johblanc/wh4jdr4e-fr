@@ -1,11 +1,10 @@
 {
-  "name": "wf4jdr4e-fr",
+  "name": "wh4jdr4e-fr",
   "version": "2.0.0",
-  "description": "CSS compiler for the Wf4jdr4eFr system",
+  "description": "CSS compiler for the Wfjdr4e system",
   "scripts": {
-    "build": "sass src/scss/wf4jdr4e-fr.scss css/wf4jdr4e-fr.css --style=expanded --no-source-map",
-    "watch": "sass src/scss/wf4jdr4e-fr.scss css/wf4jdr4e-fr.css --style=expanded --source-map --watch",
-    "generate": "node src/generate-wf4jdr4e-fr-system.mjs"
+    "build": "sass src/scss/wh4jdr4e-fr.scss css/wh4jdr4e-fr.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/wh4jdr4e-fr.scss css/wh4jdr4e-fr.css --style=expanded --source-map --watch"
   },
   "browserslist": [
     "last 3 versions"
@@ -14,11 +13,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "glob": "^10.3.10",
-    "inquirer": "^9.2.15",
-    "prompt": "^1.3.0",
-    "renamer": "^5.0.0",
-    "replace": "^1.2.2",
     "sass": "^1.53.0"
   }
 }
