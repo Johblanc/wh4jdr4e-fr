@@ -3,7 +3,6 @@
     <img
       class="profile-img"
       src="{{item.img}}"
-      data-edit="img"
       title="{{item.name}}"
     />
     <div class="header-fields">
@@ -11,62 +10,71 @@
         <h1 class="charname"><input
             name="name"
             type="text"
-            value="{{item.name}}"
+            {{#if editable}}
+              value="{{item.name}}"
+            {{else}}
+              {{#if item.system.has_indice}}
+                value="{{item.name}} (Indice)"
+              {{else}}
+                value="{{item.name}}"
+              {{/if}}
+            {{/if}}
             placeholder="Name"
           /></h1>
       </div>
       <div class="flex-form">
-        <div class="resource">
-          <label
-            class="resource-label"
-            for="system.category"
-          >{{@root.config.displaykeys.category}}</label>
-          <select
-            name="system.category"
-            data-dtype="String"
-            class="resource-content"
-          >
-            {{#select system.category}}
-              {{#each @root.config.stuffFeatureCategory as |category key|}}
-                <option value="{{key}}">{{localize
-                    (lookup @root.config.stuffFeatureCategory key)
-                  }}</option>
-              {{/each}}
-            {{/select}}
-          </select>
-        </div>
-        <div class="resource">
-          <label
-            class="resource-label"
-            for="system.division"
-          >{{@root.config.displaykeys.division}}</label>
-          <select
-            name="system.division"
-            data-dtype="String"
-            class="resource-content"
-          >
-            {{#select system.division}}
-              {{#each @root.config.stuffFeatureDivision as |division key|}}
-                <option value="{{key}}">{{localize
-                    (lookup @root.config.stuffFeatureDivision key)
-                  }}</option>
-              {{/each}}
-            {{/select}}
-          </select>
-        </div>
-        <div class="resource">
-          <label
-            class="resource-label"
-            for="system.has_indice"
-          >{{@root.config.displaykeys.has_indice}}</label>
-          <input
-            type="checkbox"
-            name="system.has_indice"
-            {{checked system.has_indice}}
-            data-dtype="Boolean"
-            class="resource-content"
-          />
-        </div>
+        {{#if editable}}
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.category"
+            >{{@root.config.displaykeys.category}}</label>
+            <select
+              name="system.category"
+              data-dtype="String"
+              class="resource-content"
+            >
+              {{selectOptions @root.config.stuffFeatureCategory selected=system.category localize=true}}
+            </select>
+          </div>
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.division"
+            >{{@root.config.displaykeys.division}}</label>
+            <select
+              name="system.division"
+              data-dtype="String"
+              class="resource-content"
+            >
+              {{selectOptions @root.config.stuffFeatureDivision selected=system.division localize=true}}
+            </select>
+          </div>
+          {{#unless (eq system.category "Group")}}
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.has_indice"
+            >{{@root.config.displaykeys.has_indice}}</label>
+            <input
+              type="checkbox"
+              name="system.has_indice"
+              {{checked system.has_indice}}
+              data-dtype="Boolean"
+              class="resource-content"
+            />
+          </div>
+          {{/unless}}
+        {{else}}
+          <p>{{localize
+              (lookup @root.config.stuffFeatureCategory system.category)
+            }}
+            -
+            {{localize
+              (lookup @root.config.stuffFeatureDivision system.division)
+            }}
+          </p>
+        {{/if}}
       </div>
     </div>
   </header>

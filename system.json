@@ -15,8 +15,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/wh4jdr4e-fr/assets/anvil-impact.png",
-      "thumbnail": "systems/wh4jdr4e-fr/assets/anvil-impact.png"
+      "url": "systems/wh4jdr4e-fr/assets/logo_clean.svg",
+      "thumbnail": "systems/wh4jdr4e-fr/assets/logo_clean.svg"
     }
   ],
   "version": "0.0.5",
@@ -43,7 +43,7 @@
   "socket": false,
   "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/system.json",
   "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/wh4jdr4e-fr.zip",
-  "background": "systems/wh4jdr4e-fr/assets/anvil-impact.png",
+  "background": "systems/wh4jdr4e-fr/assets/logo_clean.svg",
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",

@@ -9,7 +9,22 @@ export class Wfjdr4eItem extends Item {
   prepareData() {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
+
     super.prepareData();
+
+    if (this.type === "stuff_feature") {
+      this.update({
+        img: `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`,
+      });
+      if (this.system.category === "Group") {
+        this.update({
+          system: {
+            has_indice: false,
+          }
+        })
+      }
+      //this.img = `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`;
+    }
   }
 
   /**
@@ -19,9 +34,9 @@ export class Wfjdr4eItem extends Item {
   getRollData() {
     // Starts off by populating the roll data with a shallow copy of `this.system`
     const rollData = { ...this.system };
-
     // Quit early if there's no parent actor
     if (!this.actor) return rollData;
+
 
     // If present, add the actor's roll data
     rollData.actor = this.actor.getRollData();

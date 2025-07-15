@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   version="1.1"
+   viewBox="0 0 100 100"
+   xml:space="preserve"
+   id="svg188"
+   sodipodi:docname="stuff_feature_Ballistic_Weapon_Bonus.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs192" /><sodipodi:namedview
+   id="namedview190"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   showgrid="true"
+   inkscape:zoom="1.1150485"
+   inkscape:cx="27.353071"
+   inkscape:cy="295.95126"
+   inkscape:window-width="3440"
+   inkscape:window-height="1369"
+   inkscape:window-x="1352"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg188"><inkscape:grid
+     type="xygrid"
+     id="grid194"
+     units="mm"
+     spacingx="0.99999999"
+     spacingy="0.99999999" /></sodipodi:namedview>
+
+<path
+   style="fill:#004a00;fill-opacity:1;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="M 50,5 5,50 H 24.999999 V 94.999997 H 74.999997 V 50 h 20 z"
+   id="path1071" /><path
+   style="fill:#98ff98;fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="M 58,39.5 C 49,31 37,25 25,25 v 2.5 l 2.5,45 45,2.5 c 0,0 2.5,0 2.5,0 C 75,63 69,51 60.5,42 l 7,-7 v 5 L 75,25 60,32.5 h 5 c 0,0 -7,7 -7,7 z m -28,28 -2.5,-40 c 10,1 20.5,6.5 28.5,14 z m 2.5,2.5 26,-26 c 7.5,8 13,18.5 14,28.5 z"
+   id="path7235" /></svg>

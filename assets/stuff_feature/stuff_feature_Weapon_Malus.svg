@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   version="1.1"
+   viewBox="0 0 100 100"
+   xml:space="preserve"
+   id="svg188"
+   sodipodi:docname="stuff_feature_Weapon_Malus.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs192" /><sodipodi:namedview
+   id="namedview190"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   showgrid="true"
+   inkscape:zoom="1.1150485"
+   inkscape:cx="-51.118853"
+   inkscape:cy="295.95125"
+   inkscape:window-width="3440"
+   inkscape:window-height="1369"
+   inkscape:window-x="1352"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg188"><inkscape:grid
+     type="xygrid"
+     id="grid194"
+     units="mm"
+     spacingx="0.99999999"
+     spacingy="0.99999999" /></sodipodi:namedview>
+
+<path
+   style="fill:#4a0000;fill-opacity:1;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="m 50,94.999997 -45,-45 H 24.999999 V 5 h 49.999998 v 44.999997 h 20 z"
+   id="path1071" /><path
+   style="fill:#ff9898;fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="M 37.5,30 25,25 30,37.5 52.5,60 60,52.5 Z m 30,10 7.5,-15 -15,7.5 h 5 c 0,0 -7,7 -7,7 -7.5,-7 -16.5,-12.5 -26,-14 2,1 4.5,2 6.5,3 0,0 4,3.5 4,3.5 5,2.5 9.5,5.5 13.5,9.5 l -2,2 2.5,2.5 c 0,0 2,-2 2,-2 1.5,1.5 3,3.5 4.5,5.5 0,0 2,-2.5 2,-2.5 -1.5,-2 -3,-3.5 -4.5,-5 l 7,-7 z M 28,38 c -1,-2.5 -2,-4.5 -3,-7 l 2.5,41.5 c 0,0 43,2.5 43,2.5 -0.5,0 -1,-1 -1.5,-1 -0.5,-0.5 -1.5,-1.5 -2,-2 L 32.5,70 46,56.5 43.5,54 30,67.5 C 30,67.5 28,38 28,38 Z M 65,55 V 50 L 50,65 h 5 z m 9.5,15 C 73.5,63 71,56 67,50 c 0,0 0,5.5 0,5.5 2,3.5 3,7 4,10.5 1,1 2,2 3,3 0,0.5 0.5,0.5 0.5,1 z m -2,0 -10,-10 -2.5,2.5 10,10 5,2.5 z"
+   id="path7235" /></svg>
