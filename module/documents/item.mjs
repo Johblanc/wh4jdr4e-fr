@@ -13,6 +13,7 @@ export class Wfjdr4eItem extends Item {
     super.prepareData();
 
     if (this.type === "stuff_feature") {
+      console.log("Preparing Stuff Feature Item", this);
       this.update({
         img: `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`,
       });
