@@ -59,13 +59,13 @@ Hooks.once('init', function () {
   CONFIG.ActiveEffect.legacyTransferral = false;
 
   // Register sheet application classes
-  Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('wh4jdr4e-fr', Wfjdr4eActorSheet, {
+  foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Actors.registerSheet('wh4jdr4e-fr', Wfjdr4eActorSheet, {
     makeDefault: true,
     label: 'WFJDR4E.SheetLabels.Actor',
   });
-  Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('wh4jdr4e-fr', Wfjdr4eItemSheet, {
+  foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.registerSheet('wh4jdr4e-fr', Wfjdr4eItemSheet, {
     makeDefault: true,
     label: 'WFJDR4E.SheetLabels.Item',
   });
@@ -112,7 +112,7 @@ async function createItemMacro(data, slot) {
     );
   }
   // If it is, retrieve it based on the uuid.
-  const item = await Item.fromDropData(data);
+  const item = await foundry.documents.BaseItem.fromDropData(data);
 
   // Create the macro command using the uuid.
   const command = `game.wh4jdr4efr.rollItemMacro("${data.uuid}");`;
@@ -120,7 +120,7 @@ async function createItemMacro(data, slot) {
     (m) => m.name === item.name && m.command === command
   );
   if (!macro) {
-    macro = await Macro.create({
+    macro = await foundry.documents.BaseMacro.create({
       name: item.name,
       type: 'script',
       img: item.img,
@@ -144,7 +144,7 @@ function rollItemMacro(itemUuid) {
     uuid: itemUuid,
   };
   // Load the item from the uuid.
-  Item.fromDropData(dropData).then((item) => {
+  foundry.documents.BaseItem.fromDropData(dropData).then((item) => {
     // Determine if the item loaded and if it's an owned item.
     if (!item || !item.parent) {
       const itemName = item?.name ?? itemUuid;

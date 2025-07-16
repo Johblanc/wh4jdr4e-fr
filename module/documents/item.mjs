@@ -93,7 +93,7 @@ export class Wfjdr4eItem extends Item {
       const rollData = this.getRollData();
 
       // Invoke the roll and submit it to chat.
-      const roll = new Roll(rollData.formula, rollData.actor);
+      const roll = new foundry.dice.Roll(rollData.formula, rollData.actor);
       // If you need to store the value first, uncomment the next line.
       // const result = await roll.evaluate();
       roll.toMessage({

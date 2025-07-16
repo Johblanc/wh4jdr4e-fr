@@ -5,9 +5,9 @@ import {
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
+ * @extends {foundry.appv1.sheets.ActorSheet}
  */
-export class Wfjdr4eActorSheet extends ActorSheet {
+export class Wfjdr4eActorSheet extends foundry.appv1.sheets.ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
@@ -120,7 +120,7 @@ export class Wfjdr4eActorSheet extends ActorSheet {
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
-      i.img = i.img || Item.DEFAULT_ICON;
+      i.img = i.img || foundry.documents.BaseItem.DEFAULT_ICON;
       // Append to gear.
       if (i.type === 'item') {
         gear.push(i);
@@ -219,7 +219,7 @@ export class Wfjdr4eActorSheet extends ActorSheet {
     delete itemData.system['type'];
 
     // Finally, create the item!
-    return await Item.create(itemData, { parent: this.actor });
+    return await foundry.documents.BaseItem.create(itemData, { parent: this.actor });
   }
 
   /**
@@ -244,9 +244,9 @@ export class Wfjdr4eActorSheet extends ActorSheet {
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
       let label = dataset.label ? `[ability] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
+      let roll = new foundry.dice.Roll(dataset.roll, this.actor.getRollData());
       roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        speaker: foundry.documents.BaseChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label,
         rollMode: game.settings.get('core', 'rollMode'),
       });
