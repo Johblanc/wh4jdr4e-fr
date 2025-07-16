@@ -4,7 +4,8 @@
   "description": "CSS compiler for the Wfjdr4e system",
   "scripts": {
     "build": "sass src/scss/wh4jdr4e-fr.scss css/wh4jdr4e-fr.css --style=expanded --no-source-map",
-    "watch": "sass src/scss/wh4jdr4e-fr.scss css/wh4jdr4e-fr.css --style=expanded --source-map --watch"
+    "watch": "sass src/scss/wh4jdr4e-fr.scss css/wh4jdr4e-fr.css --style=expanded --source-map --watch",
+    "build-packs": "powershell -ExecutionPolicy Bypass -File ./src/scripts/packs/generate-packs.ps1"
   },
   "browserslist": [
     "last 3 versions"

@@ -1,1 +1,9 @@
 /node_modules
+
+# Exclure tous les fichiers de packs générés
+/packs/**/*
+
+# Mais inclure les fichiers gitattributes
+!packs/**/.gitattributes
+
+src/scripts/packs/**/*.json

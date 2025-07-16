@@ -38,8 +38,286 @@
       "path": "lang/fr.json"
     }
   ],
-  "packs": [],
-  "packFolders": [],
+  "packs": [
+    {
+      "name": "stuff-features-armor-bonus",
+      "label": "Armure - Bonus",
+      "path": "packs/stuff-features/Bonus/Armor.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-armor-group",
+      "label": "Armure - Groupe",
+      "path": "packs/stuff-features/Group/Armor.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-armor-malus",
+      "label": "Armure - Malus",
+      "path": "packs/stuff-features/Malus/Armor.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-ballistic-weapon-bonus",
+      "label": "Arme à distance - Bonus",
+      "path": "packs/stuff-features/Bonus/Ballistic_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-ballistic-weapon-group",
+      "label": "Arme à distance - Groupe",
+      "path": "packs/stuff-features/Group/Ballistic_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-ballistic-weapon-malus",
+      "label": "Arme à distance - Malus",
+      "path": "packs/stuff-features/Malus/Ballistic_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-container-bonus",
+      "label": "Contenant - Bonus",
+      "path": "packs/stuff-features/Bonus/Container.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-container-group",
+      "label": "Contenant - Groupe",
+      "path": "packs/stuff-features/Group/Container.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-consumable-group",
+      "label": "Consommable - Groupe",
+      "path": "packs/stuff-features/Group/Consumable.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-consumable-malus",
+      "label": "Consommable - Malus",
+      "path": "packs/stuff-features/Malus/Consumable.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-melee-weapon-bonus",
+      "label": "Arme de mêlée - Bonus",
+      "path": "packs/stuff-features/Bonus/Melee_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-melee-weapon-group",
+      "label": "Arme de mêlée - Groupe",
+      "path": "packs/stuff-features/Group/Melee_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-melee-weapon-malus",
+      "label": "Arme de mêlée - Malus",
+      "path": "packs/stuff-features/Malus/Melee_Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-objet-bonus",
+      "label": "Objet - Bonus",
+      "path": "packs/stuff-features/Bonus/Objet.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-objet-group",
+      "label": "Objet - Groupe",
+      "path": "packs/stuff-features/Group/Objet.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-objet-malus",
+      "label": "Objet - Malus",
+      "path": "packs/stuff-features/Malus/Objet.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-service-group",
+      "label": "Service - Groupe",
+      "path": "packs/stuff-features/Group/Service.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-weapon-bonus",
+      "label": "Arme - Bonus",
+      "path": "packs/stuff-features/Bonus/Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-features-weapon-malus",
+      "label": "Arme - Malus",
+      "path": "packs/stuff-features/Malus/Weapon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Propriétés d'objets",
+      "sorting": "m",
+      "color": "#4a4a4d",
+      "packs": [],
+      "folders": [
+        {
+          "name": "Group",
+          "sorting": "m",
+          "color": "#00004d",
+          "packs": [
+            "stuff-features-armor-group",
+            "stuff-features-ballistic-weapon-group",
+            "stuff-features-container-group",
+            "stuff-features-consumable-group",
+            "stuff-features-melee-weapon-group",
+            "stuff-features-objet-group",
+            "stuff-features-service-group"
+          ]
+        },
+        {
+          "name": "Bonus",
+          "sorting": "m",
+          "color": "#004a00",
+          "packs": [
+            "stuff-features-armor-bonus",
+            "stuff-features-ballistic-weapon-bonus",
+            "stuff-features-container-bonus",
+            "stuff-features-melee-weapon-bonus",
+            "stuff-features-objet-bonus",
+            "stuff-features-weapon-bonus"
+          ]
+        },
+        {
+          "name": "Malus",
+          "sorting": "m",
+          "color": "#4a0000",
+          "packs": [
+            "stuff-features-armor-malus",
+            "stuff-features-ballistic-weapon-malus",
+            "stuff-features-consumable-malus",
+            "stuff-features-melee-weapon-malus",
+            "stuff-features-objet-malus",
+            "stuff-features-weapon-malus"
+          ]
+        }
+      ]
+    }
+  ],
   "socket": false,
   "manifest": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/system.json",
   "download": "https://github.com/Johblanc/wh4jdr4e-fr/releases/latest/download/wh4jdr4e-fr.zip",
