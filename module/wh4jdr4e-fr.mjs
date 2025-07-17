@@ -59,12 +59,12 @@ Hooks.once('init', function () {
   CONFIG.ActiveEffect.legacyTransferral = false;
 
   // Register sheet application classes
-  foundry.documents.collections.Actors.unregisterSheet('core', foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Actors.unregisterSheet('core', foundry.applications.sheets.ActorSheetV2);
   foundry.documents.collections.Actors.registerSheet('wh4jdr4e-fr', Wfjdr4eActorSheet, {
     makeDefault: true,
     label: 'WFJDR4E.SheetLabels.Actor',
   });
-  foundry.documents.collections.Items.unregisterSheet('core', foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.unregisterSheet('core', foundry.applications.sheets.ItemSheetV2);
   foundry.documents.collections.Items.registerSheet('wh4jdr4e-fr', Wfjdr4eItemSheet, {
     makeDefault: true,
     label: 'WFJDR4E.SheetLabels.Item',

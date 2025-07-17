@@ -1,21 +1,41 @@
 // Add custom fonts by visiting and search https://fonts.google.com
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 // Import utilities.
-@import 'utils/typography';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/variables';
+@import "utils/typography";
+@import "utils/colors";
+@import "utils/mixins";
+@import "utils/variables";
 
 /* Global styles */
-@import 'global/window';
-@import 'global/grid';
-@import 'global/flex';
+@import "global/window";
+@import "global/grid";
+@import "global/flex";
 
 /* Styles limited to wh4jdr4e-fr sheets */
 .wh4jdr4e-fr {
-  @import 'components/forms';
-  @import 'components/resource';
-  @import 'components/items';
-  @import 'components/effects';
+  @import "components/forms";
+  @import "components/resource";
+  @import "components/items";
+  @import "components/effects";
+}
+
+.theme-dark .quill-editor {
+  --input-background-color: var(--color-dark-4);
+  --input-border-color: transparent;
+  --input-text-color: var(--color-light-3);
+}
+.theme-light .quill-editor {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-text-color: var(--color-dark-3);
+}
+/* Quill Editor Styles */
+.quill-editor {
+  .ql-container,
+  .ql-toolbar {
+    background: var(--input-background-color) !important;
+    border: 1px solid var(--input-border-color) !important;
+    color: var(--input-text-color) !important;
+  }
 }

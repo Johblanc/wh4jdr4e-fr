@@ -1,4 +1,6 @@
 /node_modules
+/TODO
+
 
 # Exclure tous les fichiers de packs générés
 /packs/**/*

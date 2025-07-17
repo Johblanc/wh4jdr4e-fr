@@ -5,19 +5,11 @@ import {
 
 /**
  * Extend the ApplicationV2 framework for actor sheets
- * @extends {foundry.applications.api.ApplicationV2}
+ * @extends {foundry.applications.sheets.ActorSheetV2}
  */
-export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
-  constructor(options = {}) {
-    super(options);
-    this.#actor = options.document;
-  }
-
-  #actor;
-
+export class Wfjdr4eActorSheet extends foundry.applications.sheets.ActorSheetV2 {
   /** @override */
   static DEFAULT_OPTIONS = {
-    tag: "form",
     classes: ['wh4jdr4e-fr', 'sheet', 'actor'],
     position: {
       width: 600,
@@ -25,81 +17,120 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
     },
     window: {
       resizable: true
+    },
+    form: {
+      submitOnChange: false,
+      closeOnSubmit: false
     }
   };
 
   /** @override */
   static PARTS = {
-    form: {
-      template: "systems/wh4jdr4e-fr/templates/actor/actor-character-sheet.hbs"
+    header: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-header.hbs"
+    },
+    tabs: {
+      template: "templates/generic/tab-navigation.hbs"
+    },
+    attributes: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-attributes.hbs"
+    },
+    inventory: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-inventory.hbs",
+      scrollable: [""]
+    },
+    features: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-features.hbs"
+    },
+    spells: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-spells.hbs"
+    },
+    biography: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-biography.hbs"
+    },
+    effects: {
+      template: "systems/wh4jdr4e-fr/templates/actor/parts/actor-effects.hbs"
     }
   };
 
   /** @override */
+  get template() {
+    return `systems/wh4jdr4e-fr/templates/actor/actor-${this.document.type}-sheet.hbs`;
+  }
+
+  /** @override */
   get title() {
-    return `${this.actor.name} - ${game.i18n.localize("WFJDR4E.SheetLabels.Actor")}`;
-  }
-
-  /** @override */
-  get actor() {
-    return this.#actor;
-  }
-
-  /** @override */
-  get document() {
-    return this.#actor;
-  }
-
-  /** @override */
-  get isEditable() {
-    return this.actor.isOwner;
+    return `${this.document.name} - ${game.i18n.localize("WFJDR4E.SheetLabels.Actor")}`;
   }
 
   /** @override */
   async _prepareContext(options) {
-    // Use a safe clone of the actor data for further operations.
-    const actorData = this.actor.toPlainObject();
+    const context = await super._prepareContext(options);
 
-    const context = {
-      actor: this.actor,
+    // Use a safe clone of the actor data for further operations.
+    const actorData = this.document.toPlainObject();
+
+    const mergedContext = foundry.utils.mergeObject(context, {
+      actor: this.document, // Maintain compatibility with existing templates
       system: actorData.system,
       flags: actorData.flags,
       config: CONFIG.WFJDR4E,
-      isEditable: this.isEditable,
-      cssClass: this.options.classes?.join(' ') || '',
-      items: this.actor.items
-    };
+      items: this.document.items,
+      tabs: this._getTabs()
+    });
 
     // Prepare character data and items.
     if (actorData.type == 'character') {
-      this._prepareItems(context);
-      this._prepareCharacterData(context);
+      this._prepareItems(mergedContext);
+      this._prepareCharacterData(mergedContext);
     }
 
     // Prepare NPC data and items.
     if (actorData.type == 'npc') {
-      this._prepareItems(context);
+      this._prepareItems(mergedContext);
     }
 
     // Enrich biography info for display
-    context.enrichedBiography = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
-      this.actor.system.biography,
+    mergedContext.enrichedBiography = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      this.document.system.biography,
       {
-        secrets: this.actor.isOwner,
+        secrets: this.document.isOwner,
         async: true,
-        rollData: this.actor.getRollData(),
-        relativeTo: this.actor,
+        rollData: this.document.getRollData(),
+        relativeTo: this.document,
       }
     );
 
     // Prepare active effects
-    context.effects = prepareActiveEffectCategories(
+    mergedContext.effects = prepareActiveEffectCategories(
       // A generator that returns all effects stored on the actor
       // as well as any items
-      this.actor.allApplicableEffects()
+      this.document.allApplicableEffects()
     );
 
-    return context;
+    return mergedContext;
+  }
+
+  /**
+   * Prepare tabs for the sheet
+   */
+  _getTabs() {
+    const tabs = {
+      attributes: { id: "attributes", group: "primary", label: "WFJDR4E.Attributes" },
+      inventory: { id: "inventory", group: "primary", label: "WFJDR4E.Inventory" },
+      features: { id: "features", group: "primary", label: "WFJDR4E.Features" },
+      biography: { id: "biography", group: "primary", label: "WFJDR4E.Biography" }
+    };
+
+    if (this.document.type === 'character') {
+      tabs.spells = { id: "spells", group: "primary", label: "WFJDR4E.Spells" };
+    }
+
+    if (this.document.effects.size > 0 || this.document.items.some(i => i.effects.size > 0)) {
+      tabs.effects = { id: "effects", group: "primary", label: "WFJDR4E.Effects" };
+    }
+
+    return tabs;
   }
 
   /**
@@ -175,9 +206,26 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
 
   /** @override */
   async _updateObject(event, formData) {
+    // Ensure the name field is preserved if not explicitly set
+    if (!formData.name && this.document.name) {
+      formData.name = this.document.name;
+    }
+
     // Update the actor with form data
-    if (!this.actor) return;
-    await this.actor.update(formData);
+    if (!this.document) return;
+    await this.document.update(formData);
+  }
+
+  /** @override */
+  _onChangeForm(formConfig, event) {
+    // Override to ensure proper data handling
+    const target = event.target;
+
+    // Skip processing if the target doesn't have a name attribute
+    if (!target.name) return;
+
+    // Call the parent method to handle the change
+    super._onChangeForm(formConfig, event);
   }
 
   /**
@@ -190,22 +238,21 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
     const li = event.target.closest('.item');
     if (!li) return;
 
-    const item = this.actor.items.get(li.dataset.itemId);
+    const item = this.document.items.get(li.dataset.itemId);
     if (item) item.sheet.render(true);
   }
-
   /**
    * Handle item delete clicks
    */
   _onItemDelete(event) {
     if (!event.target.matches('.item-delete')) return;
     if (!this.isEditable) return;
-
     event.preventDefault();
+
     const li = event.target.closest('.item');
     if (!li) return;
 
-    const item = this.actor.items.get(li.dataset.itemId);
+    const item = this.document.items.get(li.dataset.itemId);
     if (item) item.delete();
   }
 
@@ -217,35 +264,35 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
     event.preventDefault();
 
     const row = event.target.closest('li');
-    const parent = row.dataset.parentId === this.actor.id
-      ? this.actor
-      : this.actor.items.get(row.dataset.parentId);
+    const parent = row.dataset.parentId === this.document.id
+      ? this.document
+      : this.document.items.get(row.dataset.parentId);
 
     onManageActiveEffect(event, parent);
   }
-
   /**
    * Handle item creation clicks
    */
   _onItemCreate(event) {
     if (!event.target.matches('.item-create')) return;
     if (!this.isEditable) return;
-
     event.preventDefault();
+
     const header = event.target;
     const type = header.dataset.type;
-    const data = foundry.utils.duplicate(header.dataset);
+
+    // Initialize a default name.
     const name = `New ${type.capitalize()}`;
 
+    // Prepare the item object.
     const itemData = {
       name: name,
       type: type,
-      system: data,
+      system: {}
     };
 
-    delete itemData.system['type'];
-
-    return foundry.documents.BaseItem.create(itemData, { parent: this.actor });
+    // Finally, create the item!
+    return this.document.createEmbeddedDocuments('Item', [itemData]);
   }
 
   /**
@@ -253,7 +300,6 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
    */
   _onRoll(event) {
     if (!event.target.matches('.rollable')) return;
-
     event.preventDefault();
     const element = event.target;
     const dataset = element.dataset;
@@ -261,16 +307,16 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
     // Handle item rolls
     if (dataset.rollType === 'item') {
       const itemId = element.closest('.item').dataset.itemId;
-      const item = this.actor.items.get(itemId);
+      const item = this.document.items.get(itemId);
       if (item) return item.roll();
     }
 
     // Handle rolls that supply the formula directly
     if (dataset.roll) {
       let label = dataset.label ? `[ability] ${dataset.label}` : '';
-      let roll = new foundry.dice.Roll(dataset.roll, this.actor.getRollData());
+      let roll = new foundry.dice.Roll(dataset.roll, this.document.getRollData());
       roll.toMessage({
-        speaker: foundry.documents.BaseChatMessage.getSpeaker({ actor: this.actor }),
+        speaker: foundry.documents.BaseChatMessage.getSpeaker({ actor: this.document }),
         flavor: label,
         rollMode: game.settings.get('core', 'rollMode'),
       });
@@ -278,12 +324,17 @@ export class Wfjdr4eActorSheet extends foundry.applications.api.ApplicationV2 {
     }
   }
 
-  /**
-   * Factory method to create actor sheets
-   * @param {Actor} actor - The actor document
-   * @returns {Wfjdr4eActorSheet}
-   */
-  static create(actor) {
-    return new this({ document: actor });
+  /** @override */
+  async _renderHTML(context, options) {
+    // Use the template specified in the get template() method
+    const template = this.template;
+    return foundry.applications.handlebars.renderTemplate(template, context);
+  }
+
+  /** @override */
+  _replaceHTML(result, content, options) {
+    // Standard replacement - this is the default behavior
+    content.innerHTML = result;
+    return content;
   }
 }

@@ -63,23 +63,6 @@ form {
   }
 }
 
-.sheet-footer {
-  max-height: 19px;
-  padding: 0;
-  margin: 0 0 -8px -8px;
-  display: flex;
-  width: calc(100% + 8px);
-  span {
-    flex-grow: 1;
-    max-height: 18px;
-    border-top: 1px solid $c-tan;
-    margin: 0;
-    padding: 0 8px;
-    font-size: 0.8em;
-    line-height: 18px;
-  }
-}
-
 .tox {
   .tox-editor-container {
     background: $c-white;
@@ -88,4 +71,35 @@ form {
   .tox-edit-area {
     padding: 0 8px;
   }
+}
+
+.form-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .quill-editor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .quill-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .ql-container {
+        flex-grow: 1;
+      }
+    }
+  }
+  .wh4jdr4e-fr.sheet .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+.window-content {
+  overflow: auto;
 }
