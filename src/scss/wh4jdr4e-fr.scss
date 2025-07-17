@@ -18,24 +18,5 @@
   @import "components/resource";
   @import "components/items";
   @import "components/effects";
-}
-
-.theme-dark .quill-editor {
-  --input-background-color: var(--color-dark-4);
-  --input-border-color: transparent;
-  --input-text-color: var(--color-light-3);
-}
-.theme-light .quill-editor {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-text-color: var(--color-dark-3);
-}
-/* Quill Editor Styles */
-.quill-editor {
-  .ql-container,
-  .ql-toolbar {
-    background: var(--input-background-color) !important;
-    border: 1px solid var(--input-border-color) !important;
-    color: var(--input-text-color) !important;
-  }
+  @import "components/html-editor";
 }

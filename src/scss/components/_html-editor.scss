@@ -1,0 +1,88 @@
+/* Custom HTML Toggle Button for Quill Editor */
+.ql-toolbar .ql-html-toggle {
+  background: none;
+  border: none;
+  padding: 5px;
+  margin: 0 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--color-text-dark-primary, #444);
+  font-size: 14px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-border-highlight, #06c);
+    color: var(--color-text-light-heading, white);
+  }
+
+  &.ql-active {
+    background-color: var(--color-border-highlight, #06c);
+    color: var(--color-text-light-heading, white);
+  }
+
+  i {
+    font-size: 12px;
+  }
+}
+
+/* HTML Editor Textarea Styles */
+.html-editor-textarea {
+  font-family: "Consolas", "Monaco", "Courier New", monospace !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  background: var(--input-background-color) !important;
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color) !important;
+  border-radius: 0 !important;
+  padding: 8px !important;
+  resize: none !important;
+  flex-grow: 1;
+  width: 100% !important;
+  box-sizing: border-box !important;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-border-highlight, #06c);
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+  }
+}
+
+.quill-wrapper {
+  position: relative;
+  .ql-toolbar {
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .ql-container {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  // Readonly tooltip styles with Foundry VTT variables
+  &[data-readonly="true"] {
+    .ql-tooltip {
+      pointer-events: auto !important;
+
+      &.readonly-tooltip {
+        background-color: var(--color-cool-4, #f8f9fa);
+        border: 1px solid var(--color-border-light, #dee2e6);
+
+        input {
+          background-color: var(--color-cool-5, #e9ecef);
+          border: 1px solid var(--color-border-light-tertiary, #ced4da);
+          color: var(--color-text-dark-secondary, #6c757d);
+          cursor: default;
+          pointer-events: none;
+        }
+
+        .ql-action,
+        .ql-remove {
+          display: none; // Hide edit/remove buttons in readonly mode
+        }
+      }
+    }
+  }
+}
