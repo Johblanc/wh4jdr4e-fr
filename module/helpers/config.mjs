@@ -75,6 +75,14 @@ WFJDR4E.keys = {
       has_indice: 'WFJDR4E.StuffFeature.has_indice',
       category: 'WFJDR4E.StuffFeature.category',
       division: 'WFJDR4E.StuffFeature.division'
+    },
+    stuff_currency: {
+      name: 'WFJDR4E.StuffCurrency.name',
+      shortcut: 'WFJDR4E.StuffCurrency.shortcut',
+      origin: 'WFJDR4E.StuffCurrency.origin',
+      description: 'WFJDR4E.StuffCurrency.description',
+      value: 'WFJDR4E.StuffCurrency.value',
+      weight: 'WFJDR4E.StuffCurrency.weight'
     }
   }
 }
@@ -89,7 +97,8 @@ WFJDR4E.types = {
     item: 'TYPES.Item.item',
     feature: 'TYPES.Item.feature',
     spell: 'TYPES.Item.spell',
-    stuff_feature: 'TYPES.Item.stuff_feature'
+    stuff_feature: 'TYPES.Item.stuff_feature',
+    stuff_currency: 'TYPES.Item.stuff_currency'
   }
 };
 

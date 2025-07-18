@@ -74,6 +74,14 @@
       "category": "Catégorie",
       "division": "Division"
     },
+    "StuffCurrency": {
+      "name": "Nom",
+      "shortcut": "Abréviation",
+      "origin": "Origine",
+      "description": "Description",
+      "value": "Valeur",
+      "weight": "Poids"
+    },
     "SheetLabels": {
       "Actor": "Wfjdr4e Fiche d'Acteur",
       "Item": "Wfjdr4e Fiche d'Élément"
@@ -102,7 +110,8 @@
       "item": "Item",
       "feature": "Feature",
       "spell": "Spell",
-      "stuff_feature": "Propriété d'Équipement"
+      "stuff_feature": "Propriété d'Équipement",
+      "stuff_currency": "Monnaie"
     }
   }
 }

@@ -50,7 +50,8 @@ Hooks.once('init', function () {
     item: models.Wfjdr4eItem,
     feature: models.Wfjdr4eFeature,
     spell: models.Wfjdr4eSpell,
-    stuff_feature: models.Wfjdr4eStuffFeature
+    stuff_feature: models.Wfjdr4eStuffFeature,
+    stuff_currency: models.Wfjdr4eStuffCurrency,
   }
 
   // Active Effects are never copied to the Actor,

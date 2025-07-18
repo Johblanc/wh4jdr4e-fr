@@ -34,6 +34,14 @@
       "category": "Category",
       "division": "Division"
     },
+    "StuffCurrency": {
+      "name": "Name",
+      "shortcut": "Shortcut",
+      "origin": "Origin",
+      "description": "Description",
+      "value": "Value",
+      "weight": "Weight"
+    },
     "SheetLabels": {
       "Actor": "Wfjdr4e Actor Sheet",
       "Item": "Wfjdr4e Item Sheet"
@@ -62,7 +70,8 @@
       "item": "Item",
       "feature": "Feature",
       "spell": "Spell",
-      "stuff_feature": "Stuff Feature"
+      "stuff_feature": "Stuff Feature",
+      "stuff_currency": "Currency"
     }
   }
 }
