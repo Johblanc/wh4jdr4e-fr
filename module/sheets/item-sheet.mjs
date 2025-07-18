@@ -124,6 +124,13 @@ export class Wfjdr4eItemSheet extends foundry.applications.sheets.ItemSheetV2 {
       }
     });
 
+    // Add universal event listener for the name field (all item types)
+    const nameField = this.element.querySelector('input[name="name"]');
+    if (nameField) {
+      nameField.addEventListener('change', this._onNameFieldChange.bind(this));
+      nameField.addEventListener('blur', this._onNameFieldChange.bind(this));
+    }
+
     // Add specific event listeners for stuff_feature items
     if (this.document.type === 'stuff_feature') {
       // Listen for category changes to dynamically show/hide fields
@@ -137,6 +144,20 @@ export class Wfjdr4eItemSheet extends foundry.applications.sheets.ItemSheetV2 {
       if (divisionSelect) {
         divisionSelect.addEventListener('change', this._onDivisionChange.bind(this));
       }
+    }
+
+    // Add specific event listeners for stuff_currency items
+    if (this.document.type === 'stuff_currency') {
+      // Listen for changes on currency-specific fields
+      const currencyFields = ['system.shortcut', 'system.origin', 'system.value', 'system.weight'];
+      
+      currencyFields.forEach(fieldName => {
+        const field = this.element.querySelector(`input[name="${fieldName}"]`);
+        if (field) {
+          field.addEventListener('change', this._onCurrencyFieldChange.bind(this));
+          field.addEventListener('blur', this._onCurrencyFieldChange.bind(this));
+        }
+      });
     }
   }
 
@@ -193,48 +214,43 @@ export class Wfjdr4eItemSheet extends foundry.applications.sheets.ItemSheetV2 {
 
   /** @override */
   _replaceHTML(result, content, options) {
-    // For stuff_feature items, check if we need to reinitialize Quill
-    if (this.document.type === 'stuff_feature') {
-      const existingEditor = this.element?.querySelector('#description-editor .quill-wrapper');
+    const existingEditor = this.element?.querySelector('#description-editor .quill-wrapper');
 
-      // Only clean up and reinitialize if the editor doesn't exist or is broken
-      if (!existingEditor || !this.quillEditor) {
-        this._cleanupQuillEditor();
+    // Only clean up and reinitialize if the editor doesn't exist or is broken
+    if (!existingEditor || !this.quillEditor) {
+      this._cleanupQuillEditor();
 
-        // Standard replacement
-        content.innerHTML = result;
-
-        // Initialize Quill editor after HTML is rendered
-        this._initializeQuillEditor();
-      } else {
-        // Just update the content without touching the editor
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = result;
-
-        // Update only non-editor parts
-        const newContent = tempDiv.querySelector('.sheet-body');
-        const currentContent = content.querySelector('.sheet-body');
-
-        if (newContent && currentContent) {
-          // Preserve the editor while updating other elements
-          const editorContainer = currentContent.querySelector('#description-editor');
-          if (editorContainer) {
-            const editorClone = editorContainer.cloneNode(true);
-            currentContent.innerHTML = newContent.innerHTML;
-            const newEditorContainer = currentContent.querySelector('#description-editor');
-            if (newEditorContainer) {
-              newEditorContainer.parentNode.replaceChild(editorClone, newEditorContainer);
-            }
-          }
-        } else {
-          // Fallback to normal replacement
-          content.innerHTML = result;
-        }
-      }
-    } else {
-      // Standard replacement for non-stuff_feature items
+      // Standard replacement
       content.innerHTML = result;
+
+      // Initialize Quill editor after HTML is rendered
+      this._initializeQuillEditor();
+    } else {
+      // Just update the content without touching the editor
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = result;
+
+      // Update only non-editor parts
+      const newContent = tempDiv.querySelector('.sheet-body');
+      const currentContent = content.querySelector('.sheet-body');
+
+      if (newContent && currentContent) {
+        // Preserve the editor while updating other elements
+        const editorContainer = currentContent.querySelector('#description-editor');
+        if (editorContainer) {
+          const editorClone = editorContainer.cloneNode(true);
+          currentContent.innerHTML = newContent.innerHTML;
+          const newEditorContainer = currentContent.querySelector('#description-editor');
+          if (newEditorContainer) {
+            newEditorContainer.parentNode.replaceChild(editorClone, newEditorContainer);
+          }
+        }
+      } else {
+        // Fallback to normal replacement
+        content.innerHTML = result;
+      }
     }
+
 
     return content;
   }
@@ -943,5 +959,55 @@ export class Wfjdr4eItemSheet extends foundry.applications.sheets.ItemSheetV2 {
 
     // Trigger change event
     textarea.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  /**
+   * Handle currency field changes for stuff_currency items
+   */
+  async _onCurrencyFieldChange(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+
+    console.log(`Currency field changed: ${fieldName} = ${fieldValue}`);
+
+    // Create update object
+    const updateData = {};
+    
+    // Handle different field types
+    if (fieldName === 'system.value' || fieldName === 'system.weight') {
+      // Convert to number for numeric fields
+      const numValue = parseFloat(fieldValue);
+      updateData[fieldName] = isNaN(numValue) ? 0 : numValue;
+    } else {
+      // String fields
+      updateData[fieldName] = fieldValue;
+    }
+
+    try {
+      // Update the document
+      await this.document.update(updateData);
+      console.log(`Successfully updated ${fieldName}`);
+    } catch (error) {
+      console.error(`Error updating currency field ${fieldName}:`, error);
+      ui.notifications.error(`Erreur lors de la mise à jour du champ ${fieldName}`);
+    }
+  }
+
+  /**
+   * Handle name field changes for all item types
+   */
+  async _onNameFieldChange(event) {
+    const newName = event.target.value;
+
+    console.log(`Item name changed: ${newName}`);
+
+    try {
+      // Update the document name directly (not in system)
+      await this.document.update({ name: newName });
+      console.log(`Successfully updated item name to: ${newName}`);
+    } catch (error) {
+      console.error(`Error updating item name:`, error);
+      ui.notifications.error(`Erreur lors de la mise à jour du nom`);
+    }
   }
 }
