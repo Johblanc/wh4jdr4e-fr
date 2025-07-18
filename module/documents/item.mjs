@@ -11,20 +11,6 @@ export class Wfjdr4eItem extends Item {
     // preparation methods overridden (such as prepareBaseData()).
 
     super.prepareData();
-
-    if (this.type === "stuff_feature") {
-      this.update({
-        img: `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`,
-      });
-      if (this.system.category === "Group") {
-        this.update({
-          system: {
-            has_indice: false,
-          }
-        })
-      }
-      //this.img = `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`;
-    }
   }
 
   /**
@@ -54,6 +40,18 @@ export class Wfjdr4eItem extends Item {
    * @returns {object} Plain object either via deepClone or the spread operator.
    */
   toPlainObject() {
+    if (Object.keys(this.ownership).length > 1 && this.type === "stuff_feature") {
+      this.update({
+        img: `systems/wh4jdr4e-fr/assets/stuff_feature/stuff_feature_${this.system.division}_${this.system.category}.svg`,
+      });
+      if (this.system.category === "Group") {
+        this.update({
+          system: {
+            has_indice: false,
+          }
+        })
+      }
+    }
     const result = { ...this };
 
     // Simplify system data.
