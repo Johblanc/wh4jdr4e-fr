@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   version="1.1"
+   viewBox="0 0 100 100"
+   xml:space="preserve"
+   id="svg188"
+   sodipodi:docname="stuff_feature_Armor_Bonus.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs192" /><sodipodi:namedview
+   id="namedview190"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   showgrid="true"
+   inkscape:zoom="1.1150485"
+   inkscape:cx="-51.118853"
+   inkscape:cy="295.95125"
+   inkscape:window-width="3440"
+   inkscape:window-height="1369"
+   inkscape:window-x="1352"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg188"><inkscape:grid
+     type="xygrid"
+     id="grid194"
+     units="mm"
+     spacingx="0.99999999"
+     spacingy="0.99999999" /></sodipodi:namedview>
+
+<path
+   style="fill:#004a00;fill-opacity:1;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="M 50,5 5,50 H 24.999999 V 94.999997 H 74.999997 V 50 h 20 z"
+   id="path1071" /><path
+   style="fill:#98ff98;fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+   d="m 47.5,28.25 -2.5,-1.5 -1,6.5 -11.5,2.5 17.5,2.5 17.5,-2.5 -11.5,-2.5 -1,-6.5 -2.5,1.5 -1.5,5 h -1 -1 z m -11,9.5 -6.5,-1.5 -5,8 3.5,5 4.5,-2 z m 38.5,6.5 -5,-8 -6.5,1.5 3.5,9.5 4.5,2 z m -26,-5 -11.5,-1.5 -2.5,8 2.5,9 11.5,5 z m 16,6.5 -2.5,-8 -11.5,1.5 v 20.5 l 11.5,-5 z m -16,15.5 -10,-4.5 v 8 l 10,2 z m 12,3.5 v -8 l -10,4.5 v 5.5 z m -12,3 -10,-2 v 6.5 l 10,1 z m 12,4.5 v -6.5 l -10,2 v 5.5 z"
+   id="path7235" /></svg>

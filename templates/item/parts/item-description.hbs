@@ -1,0 +1,20 @@
+<section class="tab description" data-tab="description">
+  <div class="resource">
+    <label class="resource-label">{{localize "WFJDR4E.ItemDesc"}}</label>
+    <div class="form-group stacked">
+      <label>{{localize "WFJDR4E.Description"}}</label>
+      <textarea
+        name="system.description"
+        rows="20"
+        data-dtype="String"
+      >{{system.description}}</textarea>
+    </div>
+  </div>
+
+  {{#if enrichedDescription}}
+    <div class="form-group">
+      <label>{{localize "WFJDR4E.DescriptionShow"}}</label>
+      <div class="editor-content">{{{enrichedDescription}}}</div>
+    </div>
+  {{/if}}
+</section>

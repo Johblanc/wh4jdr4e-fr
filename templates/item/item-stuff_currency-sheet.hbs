@@ -1,0 +1,95 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img
+      class="profile-img"
+      src="{{item.img}}"
+      data-edit="img"
+      title="{{item.name}}"
+    />
+    <div class="header-fields">
+      <div class="header-fields">
+        <h1 class="charname"><input
+            name="name"
+            type="text"
+            {{#if editable}}
+              value="{{item.name}}"
+            {{else}}
+              value="{{item.name}} ({{system.origin}})"
+            {{/if}}
+            placeholder="Name"
+          /></h1>
+      </div>
+      <div class="flex-form">
+        {{#if editable}}
+          <div class="resource">
+            <label class="resource-label" for="system.shortcut">
+              {{displaykeys.shortcut}}
+            </label>
+            <input
+              type="text"
+              name="system.shortcut"
+              value="{{system.shortcut}}"
+              class="resource-content"
+              maxlength="5"
+            />
+          </div>
+          <div class="resource">
+            <label class="resource-label" for="system.origin">
+              {{displaykeys.origin}}
+            </label>
+            <input
+              type="text"
+              name="system.origin"
+              value="{{system.origin}}"
+              class="resource-content"
+            />
+          </div>
+          <div class="resource">
+            <label class="resource-label" for="system.value">
+            {{displaykeys.value}}
+          </label>
+          <input
+            type="number"
+            name="system.value"
+            value="{{system.value}}"
+            min="0"
+            step="0.01"
+            class="resource-content"
+            {{#unless editable}}disabled{{/unless}}
+          />
+        </div>
+        <div class="resource">
+          <label class="resource-label" for="system.weight">
+            {{displaykeys.weight}}
+          </label>
+          <div class="weight-input">
+            <input
+              type="number"
+              name="system.weight"
+              value="{{system.weight}}"
+              min="0"
+              step="0.001"
+              class="resource-content"
+              {{#unless editable}}disabled{{/unless}}
+            />
+          </div>
+        </div>
+        {{else}}
+          <div class="currency-display">
+            <span class="currency-shortcut">{{system.shortcut}}</span>
+            <span class="currency-origin">{{system.origin}}</span>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  {{! Sheet Body }}
+  <section class="sheet-body">
+    <div class="form-group">
+      <label for="description-editor">{{displaykeys.description}}</label>
+      <div id="description-editor" class="quill-editor"></div>
+      <input type="hidden" name="system.description" value="{{system.description}}" />
+    </div>
+  </section>
+</form>

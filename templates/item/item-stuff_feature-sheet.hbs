@@ -1,0 +1,92 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img
+      class="profile-img"
+      src="{{item.img}}"
+      title="{{item.name}}"
+    />
+    <div class="header-fields">
+      <div class="header-fields">
+        <h1 class="charname"><input
+            name="name"
+            type="text"
+            {{#if editable}}
+              value="{{item.name}}"
+            {{else}}
+              {{#if item.system.has_indice}}
+                value="{{item.name}} (Indice)"
+              {{else}}
+                value="{{item.name}}"
+              {{/if}}
+            {{/if}}
+            placeholder="Name"
+          /></h1>
+      </div>
+      <div class="flex-form">
+        {{#if editable}}
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.category"
+            >{{displaykeys.category}}</label>
+            <select
+              name="system.category"
+              data-dtype="String"
+              class="resource-content"
+              id="category-select"
+            >
+              {{selectOptions config.stuffFeatureCategory selected=system.category localize=true}}
+            </select>
+          </div>
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.division"
+            >{{displaykeys.division}}</label>
+            <select
+              name="system.division"
+              data-dtype="String"
+              class="resource-content"
+              id="division-select"
+            >
+              {{selectOptions config.stuffFeatureDivision selected=system.division localize=true}}
+            </select>
+          </div>
+          {{#unless (eq system.category "Group")}}
+          <div class="resource">
+            <label
+              class="resource-label"
+              for="system.has_indice"
+            >{{displaykeys.has_indice}}</label>
+            <input
+              type="checkbox"
+              name="system.has_indice"
+              {{checked system.has_indice}}
+              data-dtype="Boolean"
+              class="resource-content"
+            />
+          </div>
+          {{/unless}}
+        {{else}}
+          <p>{{localize
+              (lookup config.stuffFeatureCategory system.category)
+            }}
+            -
+            {{localize
+              (lookup config.stuffFeatureDivision system.division)
+            }}
+          </p>
+        {{/if}}
+      </div>
+    </div>
+  </header>
+
+  {{! Sheet Body }}
+  <section class="sheet-body">
+    <div class="form-group">
+      <label for="description-editor">{{displaykeys.description}}</label>
+      <div id="description-editor" class="quill-editor"></div>
+      <input type="hidden" name="system.description" value="{{system.description}}" />
+    </div>
+  </section>
+</form>

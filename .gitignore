@@ -1,15 +1,11 @@
-# IDE
-.idea/
-.vs/
+/node_modules
+/.ai
 
-# Node Modules
-node_modules/
-npm-debug.log
 
-# Foundry
-*.lock
-jsconfig.json
-foundry
+# Exclure tous les fichiers de packs générés
+/packs/**/*
 
-# Wf4jdr4eFr
-build/
+# Mais inclure les fichiers gitattributes
+!packs/**/.gitattributes
+
+src/scripts/packs/**/*.json
