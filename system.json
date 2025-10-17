@@ -266,6 +266,198 @@
       },
       "system": "wh4jdr4e-fr",
       "flags": {}
+    },
+    {
+      "name": "stuff-currencies-empire",
+      "label": "Empire - Monnaies",
+      "path": "packs/stuff-currencies/Empire.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-bretonie",
+      "label": "Bretonie - Monnaies",
+      "path": "packs/stuff-currencies/Bretonie.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-tilee",
+      "label": "Tilée - Monnaies",
+      "path": "packs/stuff-currencies/Tilée.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-estalie",
+      "label": "Estalie - Monnaies",
+      "path": "packs/stuff-currencies/Estalie.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-kislev",
+      "label": "Kislev - Monnaies",
+      "path": "packs/stuff-currencies/Kislev.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-marienburg",
+      "label": "Marienburg - Monnaies",
+      "path": "packs/stuff-currencies/Marienburg.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-norsca",
+      "label": "Norsca - Monnaies",
+      "path": "packs/stuff-currencies/Norsca.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-arabie",
+      "label": "Arabie - Monnaies",
+      "path": "packs/stuff-currencies/Arabie.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-royaumes-nains",
+      "label": "Royaumes Nains - Monnaies",
+      "path": "packs/stuff-currencies/Royaumes_Nains.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-ulthuan",
+      "label": "Ulthuan - Monnaies",
+      "path": "packs/stuff-currencies/Ulthuan.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-naggaroth",
+      "label": "Naggaroth - Monnaies",
+      "path": "packs/stuff-currencies/Naggaroth.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-lustrie",
+      "label": "Lustrie - Monnaies",
+      "path": "packs/stuff-currencies/Lustrie.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-cathay",
+      "label": "Cathay - Monnaies",
+      "path": "packs/stuff-currencies/Cathay.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-ind",
+      "label": "Ind - Monnaies",
+      "path": "packs/stuff-currencies/Ind.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-nippon",
+      "label": "Nippon - Monnaies",
+      "path": "packs/stuff-currencies/Nippon.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
+    },
+    {
+      "name": "stuff-currencies-empire-skaven",
+      "label": "Empire Skaven - Monnaies",
+      "path": "packs/stuff-currencies/Empire_Skaven.db",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "wh4jdr4e-fr",
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -313,6 +505,51 @@
             "stuff-features-melee-weapon-malus",
             "stuff-features-objet-malus",
             "stuff-features-weapon-malus"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Monnaies du Vieux Monde",
+      "sorting": "m",
+      "color": "#DAA520",
+      "packs": [],
+      "folders": [
+        {
+          "name": "Vieux Monde",
+          "sorting": "m",
+          "color": "#B8860B",
+          "packs": [
+            "stuff-currencies-empire",
+            "stuff-currencies-bretonie",
+            "stuff-currencies-tilee",
+            "stuff-currencies-estalie",
+            "stuff-currencies-kislev",
+            "stuff-currencies-marienburg",
+            "stuff-currencies-norsca",
+            "stuff-currencies-royaumes-nains"
+          ]
+        },
+        {
+          "name": "Terres Lointaines",
+          "sorting": "m",
+          "color": "#CD853F",
+          "packs": [
+            "stuff-currencies-arabie",
+            "stuff-currencies-ulthuan",
+            "stuff-currencies-naggaroth",
+            "stuff-currencies-lustrie",
+            "stuff-currencies-cathay",
+            "stuff-currencies-ind",
+            "stuff-currencies-nippon"
+          ]
+        },
+        {
+          "name": "Empires Sombres",
+          "sorting": "m",
+          "color": "#8B4513",
+          "packs": [
+            "stuff-currencies-empire-skaven"
           ]
         }
       ]

@@ -23,6 +23,19 @@ try {
     }
     
     Write-Host ""
+    
+    # Conversion des stuff-currencies
+    Write-Host "🔄 Conversion des stuff-currencies..." -ForegroundColor Yellow
+    $stuffCurrenciesScript = Join-Path $scriptDir "stuff-currencies\convert-stuff-currencies.ps1"
+    
+    if (Test-Path $stuffCurrenciesScript) {
+        & $stuffCurrenciesScript
+        Write-Host "✅ Stuff-currencies convertis avec succès" -ForegroundColor Green
+    } else {
+        throw "Script stuff-currencies introuvable: $stuffCurrenciesScript"
+    }
+    
+    Write-Host ""
     Write-Host "🎉 Tous les packs ont été générés avec succès !" -ForegroundColor Green
     
 } catch {
