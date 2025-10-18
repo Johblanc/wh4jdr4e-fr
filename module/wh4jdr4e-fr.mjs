@@ -71,6 +71,8 @@ Hooks.once('init', function () {
     label: 'WFJDR4E.SheetLabels.Item',
   });
 
+  console.log(game.packs)
+
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
